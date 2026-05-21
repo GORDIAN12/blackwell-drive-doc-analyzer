@@ -1,0 +1,9 @@
+anthropic
+pydantic
+pydantic-settings
+python-dotenv
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+pypdf
+python-docx

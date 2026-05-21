@@ -1,0 +1,62 @@
+{
+  "documento": {
+    "id": "1soULm14HrB_3zTnG4vnKF7IwhkdZXvAq",
+    "nombre": "doc_prueba_1.md",
+    "mime_type": "text/markdown"
+  },
+  "analisis": {
+    "resumen_ejecutivo": [
+      "Operativa MX Consultores presenta una propuesta de consultoría operativa a Soluciones Logísticas del Norte para optimizar su cadena de suministro y reducir tiempos de entrega.",
+      "El cliente enfrenta un incremento del 34% en volumen de pedidos sin crecimiento operativo proporcional, generando retrasos, devoluciones y baja satisfacción del cliente.",
+      "Se identificaron tres cuellos de botella críticos: tasa de error en picking del 8.2%, rutas de distribución desactualizadas y ausencia de trazabilidad de pedidos en tiempo real.",
+      "El objetivo principal es reducir el tiempo de entrega promedio de 72 a 48 horas en cinco meses, bajar la tasa de error en picking al 2.5% y habilitar trazabilidad para 40 clientes corporativos.",
+      "El proyecto se estructura en tres fases: diagnóstico detallado (semanas 1–3), diseño de soluciones (semanas 4–6) e implementación y acompañamiento (semanas 7–20).",
+      "Los responsables clave son el Ing. Roberto Cisneros y la Lic. Mariana Fuentes por parte del cliente, y el Arq. Tomás Villanueva como líder de consultoría.",
+      "Los principales riesgos incluyen resistencia al cambio, dependencia de un proveedor externo para el sistema de escaneo y la coincidencia de la fase de implementación con la temporada alta de ventas.",
+      "El esquema de pago es escalonado: 40% al inicio, 30% al arranque de la Fase 3 y 30% al cierre del proyecto."
+    ],
+    "extraccion_estructurada": {
+      "cliente_o_proyecto": "Soluciones Logísticas del Norte",
+      "objetivo_principal": "Reducir los tiempos de entrega promedio de 72 a 48 horas en cinco meses, disminuir la tasa de error en picking al 2.5% y habilitar un sistema básico de trazabilidad de pedidos para los 40 clientes corporativos activos.",
+      "entregables": [
+        "Mapeo completo del proceso de almacén y distribución",
+        "Entrevistas con operadores, supervisores y clientes clave",
+        "Reporte de hallazgos con métricas de línea base",
+        "Rediseño de rutas de distribución con herramienta de optimización",
+        "Propuesta de implementación de sistema de escaneo en picking",
+        "Diseño de tablero de seguimiento de pedidos (versión básica)",
+        "Capacitación de operadores en nuevos procesos",
+        "Puesta en marcha del sistema de escaneo",
+        "Seguimiento mensual de indicadores con reporte ejecutivo",
+        "Documentación y materiales generados al cierre del proyecto"
+      ],
+      "fechas_y_plazos": [
+        "Fase 1 — Diagnóstico detallado: semanas 1 a 3",
+        "Fase 2 — Diseño de soluciones: semanas 4 a 6",
+        "Fase 3 — Implementación y acompañamiento: semanas 7 a 20",
+        "Duración total del proyecto: 5 meses a partir de la firma",
+        "Confirmación de tiempos del proveedor de escaneo requerida antes de la semana 7",
+        "Riesgo de temporada alta en octubre-noviembre durante la fase de implementación",
+        "Documento preparado en marzo 2026"
+      ],
+      "responsables": [
+        "Ing. Roberto Cisneros — Gerente de Operaciones (Director de proyecto, cliente)",
+        "Lic. Mariana Fuentes — Coordinadora de Almacén (Responsable de implementación, cliente)",
+        "Arq. Tomás Villanueva — Socio Director, Operativa MX (Líder de consultoría)"
+      ],
+      "riesgos": [
+        "Resistencia del equipo operativo al cambio de procesos — mitigado con programa de capacitación y comunicación interna.",
+        "Dependencia de proveedor externo para el sistema de escaneo — requiere confirmar tiempos de entrega e instalación antes de la semana 7.",
+        "Temporada alta de ventas en octubre-noviembre coincide con la fase de implementación — se recomienda adelantar arranque o acordar pausas planificadas."
+      ]
+    },
+    "clasificacion": "propuesta_comercial",
+    "proximos_pasos": [
+      "Obtener la firma del contrato por ambas partes para formalizar el inicio del proyecto y activar el primer pago del 40%.",
+      "Confirmar con el proveedor externo los tiempos de entrega e instalación del sistema de escaneo antes de que inicie la semana 7.",
+      "Agendar las entrevistas con operadores, supervisores y clientes clave para la Fase 1 de diagnóstico (semanas 1–3).",
+      "Evaluar con el cliente la posibilidad de adelantar el arranque del proyecto para evitar que la Fase 3 coincida con la temporada alta de octubre-noviembre.",
+      "Definir y comunicar internamente el plan de gestión del cambio para reducir la resistencia del equipo operativo antes del inicio de la implementación."
+    ]
+  }
+}

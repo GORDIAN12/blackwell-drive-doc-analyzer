@@ -1,0 +1,59 @@
+{
+  "documento": {
+    "id": "1K9h-deT9ghVmuVjSB0NsUPHI9MDrG4iU",
+    "nombre": "doc_prueba_3.pdf",
+    "mime_type": "application/pdf"
+  },
+  "analisis": {
+    "resumen_ejecutivo": [
+      "Nexo Comunicación Estratégica presenta una propuesta de servicios de comunicación institucional y relaciones públicas a Grupo Inmobiliario Altavista, preparada en abril de 2026.",
+      "El diagnóstico identifica tres riesgos reputacionales clave: ausencia de vocero corporativo consolidado, conversación digital negativa no gestionada y cobertura mediática limitada.",
+      "El objetivo central es posicionar a Grupo Altavista como referente de confianza en el sector inmobiliario, con vocero reconocido, presencia en medios especializados y protocolo de gestión de crisis.",
+      "El alcance del servicio incluye cuatro componentes: consultoría estratégica mensual, relaciones con medios (meta de 4 apariciones mensuales), gestión de conversación digital y entrenamiento de vocero.",
+      "Los principales riesgos identificados son los retrasos en entrega de proyectos, la disponibilidad del Director General como vocero y la posible necesidad de respuestas urgentes fuera del ciclo mensual.",
+      "El contrato propuesto tiene una vigencia inicial de 6 meses, renovable, con pago mensual anticipado y entrega de todos los materiales al término del acuerdo.",
+      "Cualquier aparición o declaración pública deberá ser aprobada previamente por el cliente, garantizando control institucional sobre los mensajes."
+    ],
+    "extraccion_estructurada": {
+      "cliente_o_proyecto": "Grupo Inmobiliario Altavista",
+      "objetivo_principal": "Posicionar a Grupo Altavista como referente de confianza y solidez en el sector inmobiliario, con un vocero corporativo reconocido, presencia activa en medios especializados y un protocolo de respuesta ante situaciones de crisis operativa con compradores.",
+      "entregables": [
+        "Narrativa corporativa y mensajes clave definidos",
+        "Guías de comunicación para el vocero",
+        "4 apariciones mensuales en medios de relevancia durante los primeros 6 meses",
+        "Monitoreo semanal de menciones digitales",
+        "Protocolo de respuesta institucional ante comentarios negativos",
+        "Reporte mensual de sentimiento digital",
+        "Taller inicial de entrenamiento de vocero (4 horas) para Director General y Director Comercial",
+        "Manual de mensajes clave por tipo de audiencia",
+        "Sesiones de práctica antes de apariciones mediáticas relevantes",
+        "Entrega de materiales, bases de datos de medios y reportes al término del contrato"
+      ],
+      "fechas_y_plazos": [
+        "Propuesta preparada en abril de 2026",
+        "Contrato inicial de 6 meses, renovable",
+        "Pago mensual por anticipado, primeros 5 días naturales de cada mes",
+        "Meta de 4 apariciones mensuales en medios durante los primeros 6 meses",
+        "Protocolo de alerta en menos de 24 horas para casos de riesgo alto"
+      ],
+      "responsables": [
+        "Lic. Diego Fuentes – Director de Relaciones Institucionales (contacto principal, cliente)",
+        "Lic. Valentina Cruz – Directora General (aprobación de mensajes, cliente)",
+        "Lic. Paola Ibarra – Directora de Cuentas, Nexo Comunicación Estratégica (líder de cuenta)"
+      ],
+      "riesgos": [
+        "Proyectos con retrasos documentados representan el riesgo reputacional más inmediato; la comunicación no puede adelantarse a la resolución operativa.",
+        "La efectividad de la estrategia de medios depende de la disposición y disponibilidad del Director General como vocero activo.",
+        "El monitoreo digital puede revelar situaciones que requieran respuesta urgente fuera del ciclo mensual de reporte."
+      ]
+    },
+    "clasificacion": "propuesta_comercial",
+    "proximos_pasos": [
+      "Agendar reunión de arranque entre Nexo y la dirección de Grupo Altavista para validar la narrativa corporativa y definir la postura oficial sobre los proyectos con retrasos documentados.",
+      "Confirmar la disponibilidad y compromiso del Director General para participar como vocero principal antes de activar la estrategia de medios.",
+      "Coordinar y calendarizar el taller inicial de entrenamiento de vocero (4 horas) con el Director General y el Director Comercial.",
+      "Revisar, negociar y firmar el contrato de 6 meses, asegurando claridad en condiciones de pago, aprobación de mensajes y entregables.",
+      "Iniciar de inmediato el monitoreo digital de menciones para identificar comentarios negativos activos y preparar el protocolo de respuesta institucional."
+    ]
+  }
+}

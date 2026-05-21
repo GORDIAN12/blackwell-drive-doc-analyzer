@@ -1,0 +1,59 @@
+{
+  "documento": {
+    "id": "1amJXFA-N4lkVWb2qSVmntTGqPtYYcaXu",
+    "nombre": "doc_prueba_2.docx",
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  },
+  "analisis": {
+    "resumen_ejecutivo": [
+      "HealthTech Implementaciones presenta una propuesta a Clínica Santa Elena para implementar un sistema de Expediente Clínico Electrónico (ECE) con digitalización completa de procesos en dos fases, con fecha límite de operación el 1 de noviembre de 2026.",
+      "La clínica opera con expedientes físicos desde hace 22 años, atendiendo ~180 consultas diarias, lo que genera una carga administrativa crítica: 8 minutos promedio de búsqueda de expediente, errores de prescripción por ilegibilidad y ausencia de datos consolidados.",
+      "La Fase 1 (abril–junio 2026) cubre la instalación y configuración del sistema MedRecord Pro, integración con laboratorio y equipo de imagen, migración de datos históricos de 3 años y elaboración de manuales de usuario.",
+      "La Fase 2 (julio–octubre 2026) contempla capacitación por grupos, operación en paralelo físico-digital durante 6 semanas, soporte on-site y entrega de reporte final con métricas de adopción.",
+      "El alcance incluye la migración del 100% de expedientes activos (estimado 4,200 pacientes) y la capacitación de todo el personal médico y administrativo.",
+      "Los principales riesgos identificados son: expedientes anteriores a 2023 fuera del alcance de digitalización, resistencia del personal médico de mayor antigüedad, dependencia de conexión a internet estable y cumplimiento de la NOM-024-SSA3-2012.",
+      "El esquema de pago se divide en tres parcialidades: inicio de Fase 1, inicio de Fase 2 y entrega del reporte final, con soporte técnico incluido por 12 meses post go-live."
+    ],
+    "extraccion_estructurada": {
+      "cliente_o_proyecto": "Clínica Santa Elena",
+      "objetivo_principal": "Implementar un sistema de expediente clínico electrónico (ECE) en operación completa para el 1 de noviembre de 2026, con migración del 100% de expedientes activos (4,200 pacientes), capacitación de todo el personal y un tablero de indicadores para la dirección.",
+      "entregables": [
+        "Instalación y configuración del sistema MedRecord Pro en servidores de la clínica",
+        "Integración con sistema de laboratorio (LabSoft v3) y equipo de imagen (PACS)",
+        "Migración de datos históricos de los últimos 3 años (pacientes activos)",
+        "Manual de usuario para médicos, enfermería y recepción",
+        "Capacitación en grupos de máximo 8 personas por sesión",
+        "Operación en paralelo (físico + digital) durante 6 semanas",
+        "Soporte on-site de un técnico de HealthTech durante el primer mes de operación completa",
+        "Reporte final de implementación con métricas de adopción"
+      ],
+      "fechas_y_plazos": [
+        "Fase 1 — Configuración e integración: abril–junio 2026",
+        "Fase 2 — Capacitación y estabilización: julio–octubre 2026",
+        "Fecha límite de operación completa del ECE: 1 de noviembre de 2026",
+        "Soporte técnico incluido por 12 meses posteriores al go-live",
+        "Documento preparado en febrero de 2026"
+      ],
+      "responsables": [
+        "Dr. Arturo Medina — Patrocinador del proyecto / Director Médico (Clínica Santa Elena)",
+        "Lic. Carmen Solís — Enlace administrativo / Gerente de Administración (Clínica Santa Elena)",
+        "Ing. Felipe Garza — Responsable técnico / Jefe de Sistemas (Clínica Santa Elena)",
+        "Ing. Andrea Rojas — Líder de implementación / Project Manager Senior (HealthTech)"
+      ],
+      "riesgos": [
+        "Expedientes físicos anteriores a 2023 no serán digitalizados en esta fase; se requiere definir política de acceso al archivo físico durante la transición.",
+        "Resistencia del personal médico de mayor antigüedad; se propone involucrarlos como campeones digitales desde la Fase 1.",
+        "Dependencia de conexión a internet estable para MedRecord Pro; se recomienda contratar enlace redundante antes del inicio de Fase 2.",
+        "Riesgo regulatorio por cumplimiento de la NOM-024-SSA3-2012; HealthTech garantiza cumplimiento normativo en la configuración del sistema."
+      ]
+    },
+    "clasificacion": "propuesta_comercial",
+    "proximos_pasos": [
+      "Revisar y firmar el contrato de servicios con HealthTech antes del inicio de Fase 1 (abril 2026), confirmando el esquema de pagos en tres parcialidades.",
+      "Definir y documentar la política de acceso al archivo físico para expedientes anteriores a 2023 durante el período de transición.",
+      "Contratar un enlace de internet redundante antes del inicio de la Fase 2 (julio 2026) para garantizar disponibilidad de MedRecord Pro.",
+      "Identificar y convocar a los médicos de mayor antigüedad para integrarlos como campeones digitales desde el arranque de la Fase 1.",
+      "Coordinar con el Ing. Felipe Garza la preparación de la infraestructura de servidores para la instalación de MedRecord Pro en el plazo establecido."
+    ]
+  }
+}

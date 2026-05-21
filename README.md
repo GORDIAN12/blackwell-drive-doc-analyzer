@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 Para que el proyecto funcione correctamente, es necesario configurar las llaves de acceso y las rutas del sistema en un archivo `.env`.
 
-### Paso 1: Crear el archivo .env
+### Crear el archivo .env
 Copia la plantilla de ejemplo `.env.example` para crear tu archivo de configuración local ejecutando en tu terminal:
 
 ```bash
@@ -70,13 +70,11 @@ Puedes generar y descargar este archivo desde la consola de Google Cloud. Si nec
 Una vez descargado el archivo, muévelo a la raíz del proyecto y asegúrate de renombrarlo exactamente como `credentials.json`.
 
 
-
-
 ## 5. Ejecución del Proyecto
 
 Para procesar los documentos de una carpeta de Google Drive, necesitas obtener su identificador único (**Folder ID**) y pasarlo como argumento al script.
 
-### Paso 1: Obtener el ID de la carpeta de Google Drive
+### Obtener el ID de la carpeta de Google Drive
 Abre la carpeta en tu navegador y copia únicamente la cadena de caracteres que aparece al final de la URL, después de `/folders/`:
 
 ```text

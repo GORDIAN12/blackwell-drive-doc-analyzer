@@ -51,14 +51,6 @@ cp .env.example .env
 ```
 Modificamos  nuestras credenciales con los que se pide en nuestro archivo .env, agregando nuestra api de nuestro agente de anthropic y el modelo a usar del agente.
 
-### ¿Cómo obtener el archivo credentials.json?
-
-Puedes generar y descargar este archivo desde la consola de Google Cloud. Si necesitas una guía visual paso a paso de cómo realizar la configuración, la pantalla de consentimiento OAuth y la descarga del cliente, revisa el material de apoyo que se encuentra en la siguiente carpeta de este repositorio:
-
- `google_cloud_configuration/STEPS_API.md`
-
-Una vez descargado el archivo, muévelo a la raíz del proyecto y asegúrate de renombrarlo exactamente como `credentials.json`.
-
 ```
 ANTHROPIC_API_KEY=tu_api_key_real      # Key privada de la consola de anthropic (https://console.anthropic.com/) 
 CLAUDE_MODEL=claude-3-5-sonnet-latest  # Modelo de Claude a utilizar por el agente 
@@ -69,6 +61,17 @@ GOOGLE_TOKEN_FILE=token.json               # Archivo donde se guardará el token
 OUTPUT_DIR=outputs                      #Carpeta local donde se exportarán los resultados del procesamiento
 LOG_FILE=logs/app.log                   #Ruta del archivo para el almacenamiento de logs y errores
 ```
+### ¿Cómo obtener el archivo credentials.json?
+
+Puedes generar y descargar este archivo desde la consola de Google Cloud. Si necesitas una guía visual paso a paso de cómo realizar la configuración, la pantalla de consentimiento OAuth y la descarga del cliente, revisa el material de apoyo que se encuentra en la siguiente carpeta de este repositorio:
+
+ `app/google_cloud_configuration/STEPS_API.md`
+
+Una vez descargado el archivo, muévelo a la raíz del proyecto y asegúrate de renombrarlo exactamente como `credentials.json`.
+
+
+
+
 ## 5. Ejecución del Proyecto
 
 Para procesar los documentos de una carpeta de Google Drive, necesitas obtener su identificador único (**Folder ID**) y pasarlo como argumento al script.
@@ -82,5 +85,7 @@ Abre la carpeta en tu navegador y copia únicamente la cadena de caracteres que 
 ### Ejecutar procesamiento de archivos.
  
 ```
-python -m app.main --folder-id SUSTITUYE_LA DIRECCION
+python -m app.main --folder-id SUSTITUYE_AQUI_LA_DIRECCION_CARPETA
 ```
+
+Generando los archivos 

@@ -8,8 +8,7 @@ from app.config import settings
 from app.drive_client import DriveClient
 from app.models import DocumentMetadata, DocumentOutput
 from app.readers import extract_text_from_bytes, is_supported_file
-from app.utils import sanitize_filename
-
+from app.utils import slugify, short_hash
 
 logger = logging.getLogger(__name__)
 
@@ -80,10 +79,34 @@ class DocumentProcessor:
         return output_path
 
     def _save_output(self, output: DocumentOutput) -> Path:
-        file_stem = Path(output.documento.nombre).stem
-        safe_name = sanitize_filename(file_stem)
+        original_name = Path(output.documento.nombre).stem
 
-        output_path = self.output_dir / f"{safe_name}_{output.documento.id[:8]}.json"
+        category_slug = slugify(
+            output.analisis.clasificacion,
+            max_length=30,
+        )
+
+        client_slug = slugify(
+            output.analisis.extraccion_estructurada.cliente_o_proyecto,
+            fallback="cliente_no_identificado",
+            max_length=45,
+        )
+
+        original_slug = slugify(
+            original_name,
+            max_length=30,
+        )
+
+        unique_hash = short_hash(output.documento.id)
+
+        output_file_name = (
+            f"{category_slug}__"
+            f"{client_slug}__"
+            f"{original_slug}__"
+            f"{unique_hash}.json"
+        )
+
+        output_path = self.output_dir / output_file_name
 
         data = output.model_dump(mode="json")
 
@@ -92,4 +115,4 @@ class DocumentProcessor:
             encoding="utf-8",
         )
 
-        return output_path
+        return output_path 

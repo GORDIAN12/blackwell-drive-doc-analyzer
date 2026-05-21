@@ -21,6 +21,7 @@ Reglas obligatorias:
 - Si un dato no aparece en el documento, usa null o una lista vacía.
 - El resumen ejecutivo debe tener entre 5 y 8 bullets.
 - Los próximos pasos deben ser concretos, accionables y útiles para un equipo de trabajo.
+- En cliente_o_proyecto escribe únicamente el nombre del cliente, empresa o proyecto principal. No incluyas subtítulos, objetivos, slogans ni descripciones largas.
 - La clasificación debe ser exactamente una de estas:
   propuesta_comercial, minuta_reunion, reporte_avance, documento_operativo, otro.
 - Devuelve la información usando únicamente la herramienta indicada.

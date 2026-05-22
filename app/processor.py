@@ -20,6 +20,8 @@ class DocumentProcessor:
         self.output_dir = Path(settings.output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
+    # Procesamos la carpeta de drive iterando atraves de ellos y retornamos la lista de archivos generados. 
+    # Se usa en main.py.
     def process_folder(self, folder_id: str) -> list[Path]:
         files = self.drive.list_files_in_folder(folder_id)
 
@@ -45,6 +47,8 @@ class DocumentProcessor:
 
         return generated_outputs
 
+    # Procesamos el archivo de drive descargandolo y extrayendo el texto.
+    # Se usa en process_folder.
     def process_file(self, file: dict[str, Any]) -> Path:
         file_id = file["id"]
         file_name = file["name"]
@@ -78,6 +82,9 @@ class DocumentProcessor:
 
         return output_path
 
+    # Guardamos el output en la carpeta de outputs.
+    # Se usa en process_file.
+    # Retorna la direccion del archivo generado.
     def _save_output(self, output: DocumentOutput) -> Path:
         original_name = Path(output.documento.nombre).stem
 

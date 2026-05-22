@@ -4,6 +4,7 @@ import logging
 from app.processor import DocumentProcessor
 from app.utils import setup_logging
 
+# recibimos los argumentos, configuramos logs y mostramos los archivos generados.
 
 logger = logging.getLogger(__name__)
 

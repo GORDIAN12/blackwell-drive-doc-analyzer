@@ -15,11 +15,9 @@ SUPPORTED_EXTENSIONS = {
 
 GOOGLE_DOC_MIME_TYPE = "application/vnd.google-apps.document"
 
-
+    
+# Verifica si el archivo puede procesarse.
 def is_supported_file(file_name: str, mime_type: str | None = None) -> bool:
-    """
-    Verifica si el archivo puede procesarse.
-    """
     suffix = Path(file_name).suffix.lower()
 
     if suffix in SUPPORTED_EXTENSIONS:
@@ -53,6 +51,7 @@ def extract_text_from_bytes(
     raise ValueError(f"Formato no soportado: {file_name}")
 
 
+# Extrae el texto de un archivo de texto plano.
 def _extract_plain_text(content: bytes) -> str:
     try:
         return content.decode("utf-8")
@@ -60,6 +59,7 @@ def _extract_plain_text(content: bytes) -> str:
         return content.decode("latin-1")
 
 
+#Extraemos el texto de un archivo PDF retornando el texto unido de todas las paginas."""
 def _extract_pdf_text(content: bytes) -> str:
     reader = PdfReader(io.BytesIO(content))
 
@@ -71,7 +71,7 @@ def _extract_pdf_text(content: bytes) -> str:
 
     return "\n\n".join(pages_text).strip()
 
-
+#Extraemos el texto de un archivo DOCX retornando el texto unido.
 def _extract_docx_text(content: bytes) -> str:
     document = Document(io.BytesIO(content))
 

@@ -1,8 +1,6 @@
 import logging
-
 from anthropic import Anthropic
 from pydantic import ValidationError
-
 from app.config import settings
 from app.models import DocumentAnalysis
 

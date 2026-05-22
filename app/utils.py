@@ -6,6 +6,7 @@ from pathlib import Path
 
 from app.config import settings
 
+"""Configura los logs del sistema y se usa al iniciar el programa en main.py"""
 
 def setup_logging() -> None:
     log_path = Path(settings.log_file)
@@ -20,7 +21,8 @@ def setup_logging() -> None:
         ],
     )
 
-
+""" Limpia un texto para usarlo como parte de un nombre de archivo.
+    Se usa al guardar los outputs JSON en processor.py ya que regresa el texto normalizado."""
 def slugify(
     value: str | None,
     fallback: str = "sin_dato",
@@ -44,11 +46,13 @@ def slugify(
 
     return value
 
-
+"""Elimina los acentos de un texto se usa dentro de slugify"""
 def remove_accents(value: str) -> str:
     normalized = unicodedata.normalize("NFKD", value)
     return "".join(char for char in normalized if not unicodedata.combining(char))
 
+
+"""Genera un hash corto a partir de un texto evitando nombres de archivo duplicados."""
 
 def short_hash(value: str, length: int = 8) -> str:
     return hashlib.sha256(value.encode("utf-8")).hexdigest()[:length]

@@ -1,7 +1,6 @@
 import io
 from pathlib import Path
 from typing import Any
-
 from google.auth.transport.requests import Request as GoogleAuthRequest
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -18,6 +17,8 @@ GOOGLE_DOC_EXPORT_MIME_TYPE = "text/plain"
 
 
 class DriveClient:
+# Inicializamos el cliente de drive con sus credenciales.
+# Se usa en processor.py.
     def __init__(self) -> None:
         self.credentials_file = settings.google_credentials_file
         self.token_file = settings.google_token_file
@@ -34,7 +35,7 @@ class DriveClient:
                 str(token_path),
                 SCOPES,
             )
-
+    # Verificamos si las credenciales son validas y si no, las actualizamos.
         if not creds or not creds.valid:
             if creds and creds.expired and creds.refresh_token:
                 creds.refresh(GoogleAuthRequest())
@@ -54,6 +55,9 @@ class DriveClient:
             token_path.write_text(creds.to_json(), encoding="utf-8")
 
         return build("drive", "v3", credentials=creds)
+
+    # Listamos los archivos de la carpeta de drive.
+    # Se usa en processor.py.
 
     def list_files_in_folder(self, folder_id: str) -> list[dict[str, Any]]:
         files: list[dict[str, Any]] = []
@@ -86,7 +90,10 @@ class DriveClient:
 
         return files
 
+    # Descargamos el archivo de drive.
+    # Se usa en processor.py.
     def download_file(self, file_id: str, mime_type: str) -> bytes:
+        # Si el archivo es un documento de Google Docs, exportamos el texto plano.
         if mime_type == GOOGLE_DOC_MIME_TYPE:
             request = self.service.files().export_media(
                 fileId=file_id,

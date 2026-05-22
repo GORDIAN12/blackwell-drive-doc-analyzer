@@ -1,7 +1,7 @@
 from typing import Literal
 from pydantic import BaseModel, Field
 
-
+# Establecemos las categorias de documentos posibles.
 DocumentCategory = Literal[
     "propuesta_comercial",
     "minuta_reunion",
@@ -16,7 +16,7 @@ class DocumentMetadata(BaseModel):
     nombre: str
     mime_type: str | None = None
 
-
+# En este modelo se establecen los campos que debe extrar el agente, retornando la estructura establecida 
 class StructuredExtraction(BaseModel):
     cliente_o_proyecto: str | None = None
     objetivo_principal: str | None = None
@@ -25,7 +25,7 @@ class StructuredExtraction(BaseModel):
     responsables: list[str] = Field(default_factory=list)
     riesgos: list[str] = Field(default_factory=list)
 
-
+# Modelo para el analisis de los documentos procesados establecinedo la estrucutra de datos para retornar.
 class DocumentAnalysis(BaseModel):
     resumen_ejecutivo: list[str] = Field(
         min_length=5,
@@ -40,7 +40,7 @@ class DocumentAnalysis(BaseModel):
         description="Próximos pasos concretos y accionables.",
     )
 
-
+# Modelo para la salida de los documentos procesados usando de referencia a los modelos anteriores.
 class DocumentOutput(BaseModel):
     documento: DocumentMetadata
     analisis: DocumentAnalysis

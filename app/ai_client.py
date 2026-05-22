@@ -7,6 +7,7 @@ from app.models import DocumentAnalysis
 
 logger = logging.getLogger(__name__)
 
+# Definimos las instrucciones que el agente debe seguir para analizar los documentos.
 
 SYSTEM_PROMPT = """
 Eres un analista senior de documentos de negocio.

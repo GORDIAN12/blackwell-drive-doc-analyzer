@@ -28,6 +28,10 @@ Se decidió desarrollar el proyecto como una aplicación CLI en Python, ya que l
 ### ¿Por qué se uso Anthropic?
 El proyecto requiere convertir documentos no estructurados en un archivo JSON, claude permite definir herramientas con esquemas JSON, lo que facilita generar respuestas estructuradas y validarlas con Pydantic antes de guardarlas. Es una buena opción para tareas de lectura, resumen y análisis de documentos largos. A su vez en un gran modelo que ayuda al momento de evitar alucinaciones tiene buena calidad de extracción de datos y facilidad de integración en Python.
 
+### Uso controlado de Anthropic
+
+Se utilizó Anthropic como proveedor de IA externo para generar el análisis estructurado de los documentos. Para esta prueba se trabajó con un presupuesto inicial de 5 USD, suficiente para validar el procesamiento de los documentos de ejemplo.
+
 ### Manejo de errores.
 El sistema está diseñado para no detenerse si ocurre un error al procesar un documento.
 Si un archivo no se puede leer o si el agente falla o si la respuesta no cumple con el formato esperado, el error se registra en logs y el sistema continúa con el siguiente documento.
@@ -273,3 +277,10 @@ Para una version mas practica e intuitiva, podría agregarse una interfaz web si
 Actualmente el sistema limita la cantidad de texto enviada a la IA para evitar exceder límites de tokens. Con más tiempo, implementaría un sistema de `chunking`, dividiendo documentos largos por secciones y combinando los resultados parciales en un análisis final.
 
 Esto permitiría procesar documentos extensos sin perder información importante.
+
+### 4. Solucion a la Problematica enconrada en las pruebas 
+
+En la prueba se observó un error `529 Overloaded` de Anthropic, lo cual indica saturación temporal del servicio externo. El programa no se detuvo y continuó con los demás archivos, cumpliendo el requisito de tolerancia a fallos.
+
+Como mejora futura, agregaría una estrategia de reintentos con espera para errores temporales de la API, como `529 Overloaded`, y un modo incremental para no volver a procesar documentos que ya tienen output generado.
+

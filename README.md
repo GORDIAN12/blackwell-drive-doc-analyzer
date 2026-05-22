@@ -77,7 +77,7 @@ cd blackwell-doc-ai
 El código se dividió en módulos con responsabilidades claras:
 
 ```bash
-prueba_tecnica/
+blackwell-doc-ai/
 │
 ├── app/
 │   ├── main.py              # Punto de entrada de la CLI
@@ -169,7 +169,7 @@ python -m app.main --folder-id SUSTITUYE_AQUI_LA_DIRECCION_CARPETA
 
 Los archivos generados se pueden consultar en la carpeta `/outputs/` 
 
-![Salida de docuemntos en formato json con su nomenclatura especificada](./app/imgs/outputs.png)
+![Salida de documentos en formato json con su nomenclatura especificada](./app/google_cloud_configuration/imgs/outputs_logs.png)
 
 El nombre de cada archivo sigue la siguiente estructura:
 
@@ -180,6 +180,12 @@ El nombre de cada archivo sigue la siguiente estructura:
 > 
 > * **Organización eficiente:** Facilitas la navegación rápida al agrupar los archivos por tipo de documento, cliente asociado y nombre original.
 > * **Prevención de colisiones:** El *hash* corto evita conflictos entre nombres idénticos sin exponer públicamente el ID completo de Google Drive.
+
+### Presentacion de documentos
+
+Salida de documentos en formato JSON, encontrandolos en la carpeta /outputs/
+
+![Salida de documentos en formato JSON en outputs](./app/google_cloud_configuration/imgs/outputs_ejemplos.png)
 
 ### Ejemplo de Output generado (JSON)
 
@@ -256,6 +262,7 @@ A continuación se muestra un ejemplo real del archivo JSON estructurado que gen
 ```
 
 </details>
+
 
 ## Qué faltó o qué mejoraría con más tiempo
 
